@@ -1,6 +1,9 @@
 VDR Plugin 'filebrowser' Revision History
 -----------------------------------------
 
+2021-01-29: Version 0.2.2
+- Applied "new Makefile" patch
+
 2010-09-15: Version 0.2.1
 - Applied patch to fix compile errors on newer gcc (thanks to Dominic Evans)
 - Added numer of running/finished threads to Threads' entry in the command menu (suggested by Ronny Kornexl)
