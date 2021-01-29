@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# usage: $0 [path for resulting file] [files to recode]...
+# 
+
+FFMPEG="ffmpeg"
+
+if [ ! -f "$2" ]; then
+	echo No valid input file given
+	exit 1
+fi
+
+if [ ! -d "$1" ]; then
+	echo No valid destination path given
+	exit 1
+fi
+
+OUTPUT_DIR=$1
+
+while [[ $# > 1 ]]; do
+	FILE=$2
+	TYPE="mp3"
+	OUTFILE="$OUTPUT_DIR/$(basename "${FILE%.*}").$TYPE"
+	
+        echo Recoding $FILE to $OUTFILE
+        
+        case $TYPE in
+          "mp3")
+            $FFMPEG -i "$FILE" -map_meta_data "$OUTFILE:$FILE" -y -ab 64000 "$OUTFILE"
+            ;;
+          "ogg")
+            #metadata mapping doesnt work for ogg output for some strange reasons
+            $FFMPEG -i "$FILE" -map_meta_data "$OUTFILE:$FILE" -y -acodec libvorbis -ab 32000 "$OUTFILE"
+            ;;
+        esac
+	
+	shift
+done

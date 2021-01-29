@@ -1,0 +1,139 @@
+# translation of de_DE.po to
+# VDR plugin language source file.
+# Copyright (C) 2007 Klaus Schmidinger <kls@cadsoft.de>
+# This file is distributed under the same license as the VDR package.
+#
+# Klaus Schmidinger <kls@cadsoft.de>, 2000.
+# Holger Brunn <filebrowser@vdr.nasenbaeren.net>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: de_DE\n"
+"Report-Msgid-Bugs-To: <filebrowser@vdr.nasenbaeren.net>\n"
+"POT-Creation-Date: 2008-04-05 12:31+0200\n"
+"PO-Revision-Date: 2008-04-04 21:52+0200\n"
+"Last-Translator: Holger Brunn <filebrowser@vdr.nasenbaeren.net>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-15\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Other"
+msgstr "Andere"
+
+msgid "Other Commands"
+msgstr "Andere Kommandos"
+
+msgid "Mark"
+msgstr "Markieren"
+
+msgid "Mark all"
+msgstr "Alle markieren"
+
+msgid "Unmark"
+msgstr "Markierung aufheben"
+
+msgid "Unm. all"
+msgstr "Markierungen aufheben"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Abort"
+msgstr "Abbrechen"
+
+msgid "New"
+msgstr "Neu"
+
+msgid "New file"
+msgstr "Neue Datei"
+
+msgid "Threads"
+msgstr "Threads"
+
+msgid "Sources"
+msgstr "Verzeichnisse"
+
+msgid "View"
+msgstr "Anschauen"
+
+msgid "Play"
+msgstr "Abspielen"
+
+msgid "Access code needed"
+msgstr "Zugangscode"
+
+msgid "Code"
+msgstr "Code"
+
+msgid "Wrong code!"
+msgstr "Falscher Code!"
+
+msgid "Filebrowser"
+msgstr "Dateibrowser"
+
+msgid "Select Destination"
+msgstr "Ziel auswählen"
+
+msgid "Failed to load directory"
+msgstr "Konnte Verzeichnis nicht laden"
+
+msgid "No Updates"
+msgstr "Keine Updates"
+
+msgid "Updates"
+msgstr "Updates"
+
+msgid "Resume"
+msgstr "Weitermachen"
+
+msgid "Pause"
+msgstr "Anhalten"
+
+msgid "Kill"
+msgstr "Abbrechen"
+
+msgid "Show hidden files"
+msgstr "Versteckte Verzeichnisse anzeigen"
+
+msgid "Show full path in title"
+msgstr "Kompletten Pfad im Titel anzeigen"
+
+msgid "Running threads"
+msgstr "Laufende Threads"
+
+msgid "Kill?"
+msgstr "Abbrechen?"
+
+msgid "Remove"
+msgstr "Entfernen"
+
+msgid "Active"
+msgstr "Aktiv"
+
+msgid "Finished"
+msgstr "Fertig"
+
+msgid "Paused"
+msgstr "Angehalten"
+
+msgid "Running"
+msgstr "Läuft"
+
+msgid "The command has requested additional input"
+msgstr ""
+
+msgid "Input"
+msgstr ""
+
+msgid "Password"
+msgstr ""
+
+msgid " to "
+msgstr " nach "
+
+#~ msgid "Input test"
+#~ msgstr "Eingabe test"
+
+#, fuzzy
+#~ msgid "UserInput code needed"
+#~ msgstr "Zugangscode"
