@@ -1,0 +1,138 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: <filebrowser@vdr.nasenbaeren.net>\n"
+"POT-Creation-Date: 2010-09-15 21:47+0200\n"
+"PO-Revision-Date: 2008-07-22 22:42+0100\n"
+"Last-Translator: Diego Pierotto <vdr-italian@tiscali.it>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Other"
+msgstr "Altri"
+
+msgid "Other Commands"
+msgstr "Altri comandi"
+
+msgid "Mark"
+msgstr "Marca"
+
+msgid "Mark all"
+msgstr "Marca tutti"
+
+msgid "Unmark"
+msgstr "Smarca"
+
+msgid "Unm. all"
+msgstr "Smarca tutti"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Abort"
+msgstr "Ferma"
+
+msgid "New"
+msgstr "Nuovo"
+
+msgid "New file"
+msgstr "Nuovo file"
+
+msgid "Threads"
+msgstr "Processi"
+
+#, c-format
+msgid "Threads (%d of %d running)"
+msgstr ""
+
+msgid "Sources"
+msgstr "Fonti"
+
+msgid "View"
+msgstr "Mostra"
+
+msgid "Play"
+msgstr "Esegui"
+
+msgid "Plugin to browse through files and execute actions on them"
+msgstr ""
+
+msgid "Filebrowser"
+msgstr "Sfoglia file"
+
+msgid "Access code needed"
+msgstr "Richiesto codice accesso"
+
+msgid "Code"
+msgstr "Codice"
+
+msgid "Wrong code!"
+msgstr "Codice errato!"
+
+msgid "Select Destination"
+msgstr "Seleziona destinazione"
+
+msgid "Failed to load directory"
+msgstr "Impossibile caricare la directory"
+
+msgid "No Updates"
+msgstr "No aggiorn."
+
+msgid "Updates"
+msgstr "Aggiorn."
+
+msgid "Resume"
+msgstr "Riprendi"
+
+msgid "Pause"
+msgstr "Pausa"
+
+msgid "Kill"
+msgstr "Termina"
+
+msgid "Show hidden files"
+msgstr "Mostra file nascosti"
+
+msgid "Show full path in title"
+msgstr "Mostra percorso nel titolo"
+
+msgid "Running threads"
+msgstr "Processi in esecuzione"
+
+msgid "Kill?"
+msgstr "Terminare?"
+
+msgid "Remove"
+msgstr "Rimuovi"
+
+msgid "Active"
+msgstr "Attiva"
+
+msgid "Finished"
+msgstr "Completato"
+
+msgid "Paused"
+msgstr "In pausa"
+
+msgid "Running"
+msgstr "In esecuzione"
+
+msgid "The command has requested additional input"
+msgstr "Il comando richiede dati addizionali"
+
+msgid "Input"
+msgstr "Dati"
+
+msgid "Password"
+msgstr "Password"
+
+msgid " to "
+msgstr " a"

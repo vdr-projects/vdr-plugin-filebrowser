@@ -1,6 +1,13 @@
 VDR Plugin 'filebrowser' Revision History
 -----------------------------------------
 
+2010-09-15: Version 0.2.1
+- Applied patch to fix compile errors on newer gcc (thanks to Dominic Evans)
+- Added numer of running/finished threads to Threads' entry in the command menu (suggested by Ronny Kornexl)
+- Added french translation (thanks to Bruno Roussel)
+- Added italian translation (thanks to Diego Pierotto)
+- Updated german translation (thanks to Ronny Kornexl)
+
 2008-04-06: Version 0.2.0
 - Update URL and mail address
 - Use new versioning scheme

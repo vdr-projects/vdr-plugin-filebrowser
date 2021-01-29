@@ -72,7 +72,7 @@ cOsdMenuOtherCommands::cOsdMenuOtherCommands(cFilebrowserCommands* Commands, cha
   {
     if(Command->GetObject()->Matches(CurrentFile))
     {
-      Add(new cOsdItem(hk(Command->GetObject()->GetName()), (eOSState)osFilebrowserCloseExec));
+      Add(new cOsdItem(hk(Command->GetObject()->GetLongName()), (eOSState)osFilebrowserCloseExec));
       this->Commands->Add(new cFilebrowserCommandContainer(Command->GetObject(), false));
     }
   }

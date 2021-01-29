@@ -141,7 +141,7 @@ cOsdMenuFilebrowser::~cOsdMenuFilebrowser()
    if ( BaseDirectory ) delete BaseDirectory;
 }
 
-int cOsdMenuFilebrowser::DirectorySort ( const void* File1, const void* File2 )
+int cOsdMenuFilebrowser::DirectorySort ( const dirent64** File1, const dirent64** File2 )
 {
 
    struct dirent64* ent1=* ( struct dirent64** ) File1;
@@ -202,7 +202,7 @@ void cOsdMenuFilebrowser::LoadDir ( cString Directory )
    {
       if ( * ( Statebag->CurrentDirectory ) )
       {
-         char* slash=strrchr ( * ( Statebag->CurrentDirectory ), '/' );
+         char* slash = (char*) strrchr ( * ( Statebag->CurrentDirectory ), '/' );
 
          if ( slash )
          {
@@ -240,7 +240,7 @@ void cOsdMenuFilebrowser::Refresh ( const char* CurrentFile )
    {
       char* Title= ( char* ) malloc ( strlen ( tr ( "Filebrowser" ) ) + strlen ( Statebag->CurrentDirectory ) + 3 );
       char* Title_tmp=NULL;
-      sprintf ( Title, "%s: %s", tr ( "Filebrowser" ), ( ( Title_tmp=strrchr ( Statebag->CurrentDirectory, '/' ) ) && ! ( Statebag->ShowFullPath ) ) ? Title_tmp + 1 : * ( Statebag->CurrentDirectory ) );
+      sprintf ( Title, "%s: %s", tr ( "Filebrowser" ), ( ( Title_tmp=(char *) strrchr ( Statebag->CurrentDirectory, '/' ) ) && ! ( Statebag->ShowFullPath ) ) ? Title_tmp + 1 : * ( Statebag->CurrentDirectory ) );
       SetTitle ( Title );
       free ( Title );
    }
@@ -255,12 +255,10 @@ void cOsdMenuFilebrowser::Refresh ( const char* CurrentFile )
 
    char* cwd=getcwd ( NULL, 0 );
    dirent64** entries;
-   int count;
+   int count=scandir64 ( Statebag->CurrentDirectory, &entries, NULL, &cOsdMenuFilebrowser::DirectorySort );
 
-   if ( chdir ( Statebag->CurrentDirectory ) == 0 && ( count=scandir64 ( Statebag->CurrentDirectory, &entries, NULL, &cOsdMenuFilebrowser::DirectorySort ) ) > 0 )
+   if ( (chdir ( Statebag->CurrentDirectory ) == 0) && (count > 0) )
    {
-
-
       for ( int i=0; i<count; i++ )
       {
          if ( strcmp ( entries[i]->d_name, "." ) ==0 || ( strcmp ( entries[i]->d_name, ".." ) ==0 && strcmp ( Statebag->BaseDir, Statebag->CurrentDirectory ) ==0 ) )

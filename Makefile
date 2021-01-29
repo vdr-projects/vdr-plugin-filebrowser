@@ -58,6 +58,30 @@ DEFINES += -D_GNU_SOURCE -DPLUGIN_NAME_I18N='"$(PLUGIN)"'
 
 OBJS = $(PLUGIN).o menu-filebrowser.o commands.o threads.o menu-output.o statebag.o menu-threads.o menu-setup.o tools.o command-sources.o command-other.o commands-plugins.o menu-accesscode.o menu-userinput.o
 
+### Targets:
+
+all: libvdr-$(PLUGIN).so i18n
+
+libvdr-$(PLUGIN).so: $(OBJS)
+	$(CXX) $(CXXFLAGS) -shared $(OBJS) -o $@
+	@cp $@ $(LIBDIR)/$@.$(APIVERSION)
+
+dist: clean
+	@$(MAKE) clean -C developers/filebrowserdemo > /dev/null
+	@-rm -rf $(TMPDIR)/$(ARCHIVE)
+	@mkdir $(TMPDIR)/$(ARCHIVE)
+	@cp -a * $(TMPDIR)/$(ARCHIVE)
+	@-rm -rf $(TMPDIR)/$(ARCHIVE)/filebrowser.{filelist,kdev*}
+	@-rm -rf $(TMPDIR)/$(ARCHIVE)/{*,*/*,*/*/*}~
+	@-rm -rf $(TMPDIR)/$(ARCHIVE)/Doxyfile
+	@tar --numeric-owner -czf $(PACKAGE).tgz -C $(TMPDIR) $(ARCHIVE)
+	@-rm -rf $(TMPDIR)/$(ARCHIVE)
+	@echo Distribution package created as $(PACKAGE).tgz
+
+clean:
+	@-rm -f $(PODIR)/*.mo $(PODIR)/*.pot
+	@-rm -f $(OBJS) $(DEPFILE) *.so *.tgz core* *~
+
 ### Implicit rules:
 
 %.o: %.c
@@ -96,27 +120,3 @@ $(I18Nmsgs): $(LOCALEDIR)/%/LC_MESSAGES/vdr-$(PLUGIN).mo: $(PODIR)/%.mo
 
 .PHONY: i18n
 i18n: $(I18Nmsgs)
-
-### Targets:
-
-all: libvdr-$(PLUGIN).so i18n
-
-libvdr-$(PLUGIN).so: $(OBJS)
-	$(CXX) $(CXXFLAGS) -shared $(OBJS) -o $@
-	@cp $@ $(LIBDIR)/$@.$(APIVERSION)
-
-dist: clean
-	@$(MAKE) clean -C developers/filebrowserdemo > /dev/null
-	@-rm -rf $(TMPDIR)/$(ARCHIVE)
-	@mkdir $(TMPDIR)/$(ARCHIVE)
-	@cp -a * $(TMPDIR)/$(ARCHIVE)
-	@-rm -rf $(TMPDIR)/$(ARCHIVE)/filebrowser.{filelist,kdev*}
-	@-rm -rf $(TMPDIR)/$(ARCHIVE)/{*,*/*,*/*/*}~
-	@-rm -rf $(TMPDIR)/$(ARCHIVE)/Doxyfile
-	@tar --numeric-owner -czf $(PACKAGE).tgz -C $(TMPDIR) $(ARCHIVE)
-	@-rm -rf $(TMPDIR)/$(ARCHIVE)
-	@echo Distribution package created as $(PACKAGE).tgz
-
-clean:
-	@-rm -f $(PODIR)/*.mo $(PODIR)/*.pot
-	@-rm -f $(OBJS) $(DEPFILE) *.so *.tgz core* *~

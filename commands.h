@@ -56,6 +56,7 @@ class cFilebrowserCommand
   public:
     virtual ~cFilebrowserCommand();
     virtual const char* GetName();
+    virtual const char* GetLongName();
     virtual eKeys GetHotkey();
     virtual bool UsesDestination() { return UseDestination || UseNewDestination; };
     virtual bool UsesCurrentFile() { return UseCurrentFile; };
@@ -155,8 +156,13 @@ class cFilebrowserDestinationAbortCommand : public cFilebrowserCommand
 
 class cFilebrowserCommandThreadList : public cFilebrowserCommand
 {
+  protected:
+    char* LongName;
+  
   public:
+    const char* GetLongName();
     cFilebrowserCommandThreadList(cFilebrowserStatebag* Statebag);
+    ~cFilebrowserCommandThreadList();
     bool Execute(cOsdMenu* Menu, char* DestinationFile, char* SelectedFile);
     bool Matches(const char* Filename);
 };

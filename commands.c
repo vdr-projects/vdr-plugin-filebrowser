@@ -97,7 +97,7 @@ bool cFilebrowserCommand::MatchesSingleFile(const char* Filename)
     if(Pattern[0]!='/')
     {
       char* filename_tmp=NULL;
-      Filename=(Filename && (filename_tmp=strrchr(Filename, '/'))) ? filename_tmp + 1 : NULL;
+      Filename=(Filename && (filename_tmp=(char*)strrchr(Filename, '/'))) ? filename_tmp + 1 : NULL;
     }
     if(Filename==NULL)
     {
@@ -108,6 +108,11 @@ bool cFilebrowserCommand::MatchesSingleFile(const char* Filename)
 }
 
 const char* cFilebrowserCommand::GetName()
+{
+  return tr(Name);
+}
+
+const char* cFilebrowserCommand::GetLongName()
 {
   return tr(Name);
 }
@@ -461,6 +466,37 @@ bool cFilebrowserDestinationNewCommand::Matches(const char* Filename)
 cFilebrowserCommandThreadList::cFilebrowserCommandThreadList(cFilebrowserStatebag* Statebag) : cFilebrowserCommand(Statebag)
 {
   Name=strcpyrealloc(Name, tr("Threads"));
+  LongName=(char*)malloc(strlen(tr("Threads (%d of %d running)")) + 10);
+}
+
+cFilebrowserCommandThreadList::~cFilebrowserCommandThreadList()
+{
+  free(LongName);
+}
+
+const char* cFilebrowserCommandThreadList::GetLongName()
+{
+  int threadCount=0;
+  int runningThreadCount=0;
+  for(cThreadContainer* i=Statebag->GetThreads()->First(); i; i=Statebag->GetThreads()->Next(i))
+  {
+    threadCount++;
+    if(i->GetObject()->GetState()==tsRunning)
+    {
+      runningThreadCount++;
+    }
+  }
+  
+  if(threadCount)
+  {
+    sprintf(LongName, tr("Threads (%d of %d running)"), runningThreadCount, threadCount);
+  }
+  else
+  {
+    strcpy(LongName, Name);
+  }
+  
+  return LongName;
 }
 
 bool cFilebrowserCommandThreadList::Execute(cOsdMenu* Menu, char* DestinationFile, char* SelectedFile)

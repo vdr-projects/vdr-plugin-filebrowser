@@ -24,9 +24,9 @@
 #include "command-other.h"
 #include "commands-plugins.h"
 
-static const char *VERSION        = "0.2.0";
-static const char *DESCRIPTION    = "Plugin to browse through files and execute actions on them";
-static const char *MAINMENUENTRY  = "Filebrowser";
+static const char *VERSION        = "0.2.1";
+static const char *DESCRIPTION    = trNOOP("Plugin to browse through files and execute actions on them");
+static const char *MAINMENUENTRY  = trNOOP("Filebrowser");
 
 class cPluginFilebrowser : public cPlugin {
 private:

@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: de_DE\n"
 "Report-Msgid-Bugs-To: <filebrowser@vdr.nasenbaeren.net>\n"
 "POT-Creation-Date: 2010-09-15 21:47+0200\n"
-"PO-Revision-Date: 2008-04-04 21:52+0200\n"
-"Last-Translator: Holger Brunn <filebrowser@vdr.nasenbaeren.net>\n"
+"PO-Revision-Date: 2008-04-09 14:08+0100\n"
+"Last-Translator: Bruno ROUSSEL <bruno.roussel@free.fr>\n"
 "Language-Team: \n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -19,122 +19,122 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "Other"
-msgstr "Andere"
+msgstr "Autre"
 
 msgid "Other Commands"
-msgstr "Andere Kommandos"
+msgstr "Autres Commande"
 
 msgid "Mark"
-msgstr "Markieren"
+msgstr "Marquer"
 
 msgid "Mark all"
-msgstr "Alle markieren"
+msgstr "Tout Marquer"
 
 msgid "Unmark"
-msgstr "Markierung aufheben"
+msgstr "Démarquer"
 
 msgid "Unm. all"
-msgstr "Markierungen aufheben"
+msgstr "Tout Démarquer"
 
 msgid "OK"
 msgstr "OK"
 
 msgid "Abort"
-msgstr "Abbrechen"
+msgstr "Annuler"
 
 msgid "New"
-msgstr "Neu"
+msgstr "Nouveau"
 
 msgid "New file"
-msgstr "Neue Datei"
+msgstr "Nouveau Fichier"
 
 msgid "Threads"
-msgstr "Threads"
+msgstr "Processus"
 
 #, c-format
 msgid "Threads (%d of %d running)"
-msgstr "Threads (%d von %d laufen)"
+msgstr ""
 
 msgid "Sources"
-msgstr "Verzeichnisse"
+msgstr "Sources"
 
 msgid "View"
-msgstr "Anschauen"
+msgstr "Voir"
 
 msgid "Play"
-msgstr "Abspielen"
+msgstr "Jouer"
 
 msgid "Plugin to browse through files and execute actions on them"
 msgstr ""
 
 msgid "Filebrowser"
-msgstr "Dateibrowser"
+msgstr "Gestionnaire de fichier"
 
 msgid "Access code needed"
-msgstr "Zugangscode"
+msgstr "Code d'accès nécéssaire"
 
 msgid "Code"
 msgstr "Code"
 
 msgid "Wrong code!"
-msgstr "Falscher Code!"
+msgstr "Mauvais Code !"
 
 msgid "Select Destination"
-msgstr "Ziel auswählen"
+msgstr "Sélectionner la destination"
 
 msgid "Failed to load directory"
-msgstr "Konnte Verzeichnis nicht laden"
+msgstr "Erreur de chargement du répertoire"
 
 msgid "No Updates"
-msgstr "Keine Updates"
+msgstr "Pas de mise à jour"
 
 msgid "Updates"
-msgstr "Updates"
+msgstr "Mise à jour"
 
 msgid "Resume"
-msgstr "Weitermachen"
+msgstr "Reprendre"
 
 msgid "Pause"
-msgstr "Anhalten"
+msgstr "Pause"
 
 msgid "Kill"
-msgstr "Abbrechen"
+msgstr "Arrêter"
 
 msgid "Show hidden files"
-msgstr "Versteckte Verzeichnisse anzeigen"
+msgstr "Voir les fichiers cachés"
 
 msgid "Show full path in title"
-msgstr "Kompletten Pfad im Titel anzeigen"
+msgstr "Voir le chemin complet dans le titre"
 
 msgid "Running threads"
-msgstr "Laufende Threads"
+msgstr "Processus en cours"
 
 msgid "Kill?"
-msgstr "Abbrechen?"
+msgstr "Arrêter ?"
 
 msgid "Remove"
-msgstr "Entfernen"
+msgstr "Supprimer"
 
 msgid "Active"
-msgstr "Aktiv"
+msgstr "Actif"
 
 msgid "Finished"
-msgstr "Fertig"
+msgstr "Fini"
 
 msgid "Paused"
-msgstr "Angehalten"
+msgstr "Pause"
 
 msgid "Running"
-msgstr "Läuft"
+msgstr "En cours"
 
 msgid "The command has requested additional input"
-msgstr "Das Kommando erwartet weitere Eingaben"
+msgstr "La commande nécéssite des paramètres supplémentaires"
 
 msgid "Input"
-msgstr "Eingabe"
+msgstr "Entrée"
 
 msgid "Password"
-msgstr "Passwort"
+msgstr "Password"
 
 msgid " to "
-msgstr " nach "
+msgstr " vers"
