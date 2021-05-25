@@ -93,7 +93,7 @@ cFilebrowserCommandSourcesList::cSource::cSource(char* Line)
 void cFilebrowserCommandSourcesList::cSource::SwitchTo(cFilebrowserStatebag* Statebag)
 {
   D(fprintf(stderr, "[filebrowser] Setting new source: %s\n", *Path));
-  sprintf(Statebag->BaseDir, Path);
+  sprintf(Statebag->BaseDir, "%s", Path);
   Statebag->CurrentFiles->Clear();
   Statebag->CurrentDirectory=Path;
   Statebag->Filter=Filter;
