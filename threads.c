@@ -303,7 +303,7 @@ cConfigCommandThread::cConfigCommandThread(cFilebrowserStatebag* Statebag, char*
     Description=(char*)malloc(strlen(Command->GetName()) + 1);
     sprintf(Description, "%s", Command->GetName());
   }
-  SetDescription(Description);
+  SetDescription("%s", Description);
   RemoveRequested=Command->RemoveWhenFinished();
 //  D(fprintf(stderr, "got %d marked files\n", Statebag->GetSelectedFiles()->Count()));
   D(fprintf(stderr, "created thread %s\n", Description));
