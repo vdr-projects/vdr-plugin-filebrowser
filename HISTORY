@@ -1,6 +1,9 @@
 VDR Plugin 'filebrowser' Revision History
 -----------------------------------------
 
+2021-05-25: Version 0.2.3
+- Fix "format not a string literal and no format arguments" error
+
 2021-01-29: Version 0.2.2
 - Applied "new Makefile" patch
 

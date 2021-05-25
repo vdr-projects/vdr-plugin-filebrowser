@@ -24,7 +24,7 @@
 #include "command-other.h"
 #include "commands-plugins.h"
 
-static const char *VERSION        = "0.2.2";
+static const char *VERSION        = "0.2.3";
 static const char *DESCRIPTION    = trNOOP("Plugin to browse through files and execute actions on them");
 static const char *MAINMENUENTRY  = trNOOP("Filebrowser");
 
